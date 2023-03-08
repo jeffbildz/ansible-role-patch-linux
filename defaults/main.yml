@@ -1,0 +1,8 @@
+---
+# defaults file for ansible-role-template
+
+# This file is where you define the default variables for a role.
+# This is probably where you want to define ANY vars for your role -- as they can be overridden in group_vars & host_vars.
+# The ./vars/main.yml file should only contain variables that you wouldn't want overridden.
+#
+# This is due to variable precedence in Ansible. See https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#understanding-variable-precedence

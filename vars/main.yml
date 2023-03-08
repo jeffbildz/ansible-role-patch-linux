@@ -1,0 +1,6 @@
+---
+# vars file for ansible-role-template
+
+# This file should only contain vars that you wouldn't want overridden.
+# Most vars should probably go into ./defaults/main.yml
+# This is due to variable precedence in Ansible. See https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#understanding-variable-precedence

@@ -1,0 +1,9 @@
+# required roles/collections for this role
+# ---
+# collections:
+#   - name: community.windows
+# roles:
+#   - name: ansible-role-windows_update
+#     src: https://github.com/jeffbildz/ansible-role-windows_update.git
+#     scm: git
+#     version: devel

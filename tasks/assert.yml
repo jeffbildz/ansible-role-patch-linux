@@ -1,0 +1,13 @@
+---
+# This is an optional file that is typically used to ensure variables for the role are declared correctly.
+
+- name: test if ansible-role-template_X is set correctly
+  ansible.builtin.assert:
+    that:
+      - ansible-role-template_X is defined
+      - ansible-role-template_X is iterable
+      - ansible-role-template_X is number
+      - ansible-role-template_X is boolean
+      - ansible-role-template_X = 0
+      - ansible-role-template_X in [ "a", "b" ]
+    quiet: yes
