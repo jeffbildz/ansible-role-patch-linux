@@ -35,7 +35,7 @@
   command: shutdown -r +1  "Rebooting CentOS/RedHat Servers After Kernel Patching"
   async: 0
   poll: 0
-  when: reboot_required.stdout == "reboot_needed" and (ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux' or ansible_distribution == 'Rocky Linux')
+  when: (ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux' or ansible_distribution == 'Rocky Linux') and reboot_required.stdout == "reboot_needed"
   register: reboot_started
   ignore_errors: true
 
