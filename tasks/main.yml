@@ -41,7 +41,7 @@
 
     - name: Debug Debian/Ubuntu reboot output
       debug:
-        msg: "{{ rreboot_required_file }}"
+        msg: "{{ reboot_required_file }}"
 
     - name: Reboot Ubuntu/Debian Servers if kernel updated
       ansible.builtin.reboot:
