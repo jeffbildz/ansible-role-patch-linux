@@ -12,6 +12,10 @@
       ignore_errors: true
       register: reboot_required
 
+    - name: 
+      debug:
+      msg: "{{ reboot_required }}"
+
     - name: Reboot CentOS/RedHat systems if kernel updated
       ansible.builtin.command: shutdown -r +1  "Rebooting CentOS/RedHat Servers After Kernel Patching"
       async: 0
@@ -35,6 +39,10 @@
       ansible.builtin.stat: path=/var/run/reboot-required get_md5=no
       register: reboot_required_file
 
+    - name: 
+      debug:
+      msg: "{{ rreboot_required_file }}"
+
     - name: Reboot Ubuntu/Debian Servers if kernel updated
       ansible.builtin.reboot:
         msg: "Rebooting Ubuntu/Debian Servers After Kernel Patching"
@@ -43,7 +51,7 @@
         pre_reboot_delay: 0
         post_reboot_delay: 30
         test_command: uptime
-      when: reboot_required.stdout == "reboot_needed"
+      when: reboot_required_file.stdout == "reboot_needed"
       register: reboot_started_ubuntu
       ignore_errors: true
   when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
