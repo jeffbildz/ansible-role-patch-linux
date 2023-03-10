@@ -12,7 +12,7 @@
       ignore_errors: true
       register: reboot_required
 
-    - name: 
+    - name: Debug Redhat reboot output
       debug:
       msg: "{{ reboot_required }}"
 
@@ -39,7 +39,7 @@
       ansible.builtin.stat: path=/var/run/reboot-required get_md5=no
       register: reboot_required_file
 
-    - name: 
+    - name: Debug Debian/Ubuntu reboot output
       debug:
       msg: "{{ rreboot_required_file }}"
 
