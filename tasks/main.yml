@@ -14,7 +14,7 @@
 
     - name: Debug Redhat reboot output
       debug:
-      msg: "{{ reboot_required }}"
+        msg: "{{ reboot_required }}"
 
     - name: Reboot CentOS/RedHat systems if kernel updated
       ansible.builtin.command: shutdown -r +1  "Rebooting CentOS/RedHat Servers After Kernel Patching"
@@ -41,7 +41,7 @@
 
     - name: Debug Debian/Ubuntu reboot output
       debug:
-      msg: "{{ rreboot_required_file }}"
+        msg: "{{ rreboot_required_file }}"
 
     - name: Reboot Ubuntu/Debian Servers if kernel updated
       ansible.builtin.reboot:
